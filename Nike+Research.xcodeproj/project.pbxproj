@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015575F024C7E3E90008E319 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015575EF24C7E3E90008E319 /* Podcast.swift */; };
 		301F722A24C7DCD2003B3A0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 301F722924C7DCD2003B3A0B /* GoogleService-Info.plist */; };
 		52E3D2121E7F0D990064B02E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3D2111E7F0D990064B02E /* AppDelegate.swift */; };
 		52E3D2141E7F0D990064B02E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3D2131E7F0D990064B02E /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		015575EF24C7E3E90008E319 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		0EEEF175A8FEDF142981195D /* Pods-Nike+Research.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike+Research.debug.xcconfig"; path = "Target Support Files/Pods-Nike+Research/Pods-Nike+Research.debug.xcconfig"; sourceTree = "<group>"; };
 		301F722924C7DCD2003B3A0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52E3D20E1E7F0D990064B02E /* Nike+Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike+Research.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				52E3D2231E7F0DAD0064B02E /* Shoe.swift */,
+				015575EF24C7E3E90008E319 /* Podcast.swift */,
 			);
 			name = MODEL;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				52E3D22E1E7F32FD0064B02E /* ShoeDetailTableViewController.swift in Sources */,
 				52E3D2391E7F53EB0064B02E /* SuggestionTableViewCell.swift in Sources */,
 				52F7B6161E7F9F7E00735A46 /* CheckoutTableViewController.swift in Sources */,
+				015575F024C7E3E90008E319 /* Podcast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
