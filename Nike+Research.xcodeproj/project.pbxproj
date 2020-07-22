@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301F722A24C7DCD2003B3A0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 301F722924C7DCD2003B3A0B /* GoogleService-Info.plist */; };
 		52E3D2121E7F0D990064B02E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3D2111E7F0D990064B02E /* AppDelegate.swift */; };
 		52E3D2141E7F0D990064B02E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3D2131E7F0D990064B02E /* ViewController.swift */; };
 		52E3D2171E7F0D990064B02E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E3D2151E7F0D990064B02E /* Main.storyboard */; };
@@ -24,9 +25,12 @@
 		52FDBCE31E87718D00A59876 /* ShoeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDBCE21E87718D00A59876 /* ShoeImageViewController.swift */; };
 		52FDBCE51E8771FB00A59876 /* ShoeImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDBCE41E8771FB00A59876 /* ShoeImagesPageViewController.swift */; };
 		52FDBCE71E877B0A00A59876 /* ShoeImagesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDBCE61E877B0A00A59876 /* ShoeImagesHeaderView.swift */; };
+		79DD2083A3397D3D0AEABE35 /* Pods_Nike_Research.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F52960F8E043774F24BDC6 /* Pods_Nike_Research.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EEEF175A8FEDF142981195D /* Pods-Nike+Research.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike+Research.debug.xcconfig"; path = "Target Support Files/Pods-Nike+Research/Pods-Nike+Research.debug.xcconfig"; sourceTree = "<group>"; };
+		301F722924C7DCD2003B3A0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52E3D20E1E7F0D990064B02E /* Nike+Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike+Research.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E3D2111E7F0D990064B02E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E3D2131E7F0D990064B02E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 		52FDBCE21E87718D00A59876 /* ShoeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeImageViewController.swift; sourceTree = "<group>"; };
 		52FDBCE41E8771FB00A59876 /* ShoeImagesPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeImagesPageViewController.swift; sourceTree = "<group>"; };
 		52FDBCE61E877B0A00A59876 /* ShoeImagesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeImagesHeaderView.swift; sourceTree = "<group>"; };
+		B9DEB73486AA91A02A1BB435 /* Pods-Nike+Research.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike+Research.release.xcconfig"; path = "Target Support Files/Pods-Nike+Research/Pods-Nike+Research.release.xcconfig"; sourceTree = "<group>"; };
+		E9F52960F8E043774F24BDC6 /* Pods_Nike_Research.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nike_Research.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +59,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DD2083A3397D3D0AEABE35 /* Pods_Nike_Research.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1101B8A1CF88F3E0B2E3EF32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EEEF175A8FEDF142981195D /* Pods-Nike+Research.debug.xcconfig */,
+				B9DEB73486AA91A02A1BB435 /* Pods-Nike+Research.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		41359ABE7166AE0F72DE4233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9F52960F8E043774F24BDC6 /* Pods_Nike_Research.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52E3D2051E7F0D990064B02E = {
 			isa = PBXGroup;
 			children = (
 				52E3D2101E7F0D990064B02E /* Nike+Research */,
 				52E3D20F1E7F0D990064B02E /* Products */,
+				1101B8A1CF88F3E0B2E3EF32 /* Pods */,
+				41359ABE7166AE0F72DE4233 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +104,7 @@
 		52E3D2101E7F0D990064B02E /* Nike+Research */ = {
 			isa = PBXGroup;
 			children = (
+				301F722924C7DCD2003B3A0B /* GoogleService-Info.plist */,
 				52E3D2111E7F0D990064B02E /* AppDelegate.swift */,
 				52E3D2131E7F0D990064B02E /* ViewController.swift */,
 				52E3D2151E7F0D990064B02E /* Main.storyboard */,
@@ -147,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52E3D2201E7F0D990064B02E /* Build configuration list for PBXNativeTarget "Nike+Research" */;
 			buildPhases = (
+				D188FEF1F0DB05F2F8AFF0E7 /* [CP] Check Pods Manifest.lock */,
 				52E3D20A1E7F0D990064B02E /* Sources */,
 				52E3D20B1E7F0D990064B02E /* Frameworks */,
 				52E3D20C1E7F0D990064B02E /* Resources */,
+				3FC5682B81D64090141635DA /* [CP] Embed Pods Frameworks */,
+				8F3D0139B2D3E4EC018FF688 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,11 +233,87 @@
 			files = (
 				52E3D21C1E7F0D990064B02E /* LaunchScreen.storyboard in Resources */,
 				52E3D2191E7F0D990064B02E /* Assets.xcassets in Resources */,
+				301F722A24C7DCD2003B3A0B /* GoogleService-Info.plist in Resources */,
 				52E3D2171E7F0D990064B02E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FC5682B81D64090141635DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike+Research/Pods-Nike+Research-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nike+Research/Pods-Nike+Research-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F3D0139B2D3E4EC018FF688 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nike+Research/Pods-Nike+Research-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nike+Research/Pods-Nike+Research-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D188FEF1F0DB05F2F8AFF0E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nike+Research-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52E3D20A1E7F0D990064B02E /* Sources */ = {
@@ -348,12 +454,13 @@
 		};
 		52E3D2211E7F0D990064B02E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EEEF175A8FEDF142981195D /* Pods-Nike+Research.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 593ZXM85A3;
 				INFOPLIST_FILE = "Nike+Research/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.ductran.Nike-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quieroaprobar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -361,12 +468,13 @@
 		};
 		52E3D2221E7F0D990064B02E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9DEB73486AA91A02A1BB435 /* Pods-Nike+Research.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 593ZXM85A3;
 				INFOPLIST_FILE = "Nike+Research/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.ductran.Nike-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quieroaprobar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
