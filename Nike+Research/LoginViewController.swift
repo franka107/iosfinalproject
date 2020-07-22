@@ -9,16 +9,53 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import TextFieldFloatingPlaceholder
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var correoField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-   
+    @IBOutlet weak var correoField: TextFieldFloatingPlaceholder!
+    @IBOutlet weak var passwordField: TextFieldFloatingPlaceholder!
+    @IBOutlet var viewtap: UITapGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.assignbackground()
+        self.passwordField.floatingPlaceholderColor = UIColor.blue.withAlphaComponent(0.3)
+        self.passwordField.floatingPlaceholderMinFontSize = 16
+        self.passwordField.validationFalseLineEditingColor = .black
+        self.passwordField.validationTrueLineEditingColor = .white
+        self.passwordField.validation = { $0.count > 1 }
+        self.passwordField.validationFalseLineEditingColor = .white
+        self.passwordField.validationTrueLineEditingColor = .white
+        self.passwordField.validationFalseLineColor = .lightGray
+        self.passwordField.validationTrueLineColor = .lightGray
+        
+        self.correoField.floatingPlaceholderColor = UIColor.blue.withAlphaComponent(0.3)
+        self.correoField.floatingPlaceholderMinFontSize = 16
+        self.correoField.validation = { $0.count > 1 }
+        self.correoField.validationFalseLineEditingColor = .white
+        self.correoField.validationTrueLineEditingColor = .white
+        self.correoField.validationFalseLineColor = .lightGray
+        self.correoField.validationTrueLineColor = .lightGray
+        
+        self.viewtap.addTarget(self, action: #selector(LoginViewController.tap))
+    }
+    @objc func tap() {
+        self.correoField.endEditing(true)
+        self.passwordField.endEditing(true)
+    }
 
-        // Do any additional setup after loading the view.
+    func assignbackground(){
+        let background = UIImage(named: "background")
+
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
     }
     
     @IBAction func loginAction(_ sender: Any) {
