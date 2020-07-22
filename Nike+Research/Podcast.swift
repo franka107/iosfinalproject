@@ -8,6 +8,8 @@
 
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class Podcast{
     var uid: String?
@@ -29,6 +31,10 @@ class Podcast{
     }
     
     class func fetchPodcasts() -> [Podcast]{
+        Database.database().reference().child('podcasts').observe(DataEventType.childAdded, with: {(snapshot) in
+            let podcast = Podcast()
+            podcast.uid = (snapshot.value as! NSDictionary)["uid"] as! String
+        })
         return []
     }
 }
