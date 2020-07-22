@@ -16,4 +16,5 @@ target 'Nike+Research' do
   pod 'Firebase/Database'
   pod 'SDWebImage'
   pod "TextFieldFloatingPlaceholder"
+  pod 'TransitionButton'
 end
