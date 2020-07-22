@@ -14,6 +14,7 @@
 		30BB998E24C8388000C3804E /* PodcastsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB998D24C8388000C3804E /* PodcastsTableViewController.swift */; };
 		30BB999024C8397E00C3804E /* AddPodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB998F24C8397E00C3804E /* AddPodcastViewController.swift */; };
 		30BB999224C83B1F00C3804E /* FilePodcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB999124C83B1F00C3804E /* FilePodcast.swift */; };
+		30BB999424C8581100C3804E /* ProfileAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB999324C8581100C3804E /* ProfileAdminViewController.swift */; };
 		52E3D2121E7F0D990064B02E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3D2111E7F0D990064B02E /* AppDelegate.swift */; };
 		52E3D2141E7F0D990064B02E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3D2131E7F0D990064B02E /* ViewController.swift */; };
 		52E3D2171E7F0D990064B02E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E3D2151E7F0D990064B02E /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		30BB998D24C8388000C3804E /* PodcastsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsTableViewController.swift; sourceTree = "<group>"; };
 		30BB998F24C8397E00C3804E /* AddPodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPodcastViewController.swift; sourceTree = "<group>"; };
 		30BB999124C83B1F00C3804E /* FilePodcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePodcast.swift; sourceTree = "<group>"; };
+		30BB999324C8581100C3804E /* ProfileAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAdminViewController.swift; sourceTree = "<group>"; };
 		52E3D20E1E7F0D990064B02E /* Nike+Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike+Research.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E3D2111E7F0D990064B02E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E3D2131E7F0D990064B02E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				30BB998B24C826A700C3804E /* AdminViewController.swift */,
 				30BB998D24C8388000C3804E /* PodcastsTableViewController.swift */,
 				30BB998F24C8397E00C3804E /* AddPodcastViewController.swift */,
+				30BB999324C8581100C3804E /* ProfileAdminViewController.swift */,
 			);
 			path = "Nike+Research";
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				52E3D2391E7F53EB0064B02E /* SuggestionTableViewCell.swift in Sources */,
 				30BB999224C83B1F00C3804E /* FilePodcast.swift in Sources */,
 				52F7B6161E7F9F7E00735A46 /* CheckoutTableViewController.swift in Sources */,
+				30BB999424C8581100C3804E /* ProfileAdminViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,9 +20,9 @@ class PodcastsTableViewController: UITableViewController {
             let pod = Podcast1()
             pod.uid = snapshot.key
             pod.name = (snapshot.value as! NSDictionary)["name"] as! String
-            pod.image_url = (snapshot.value as! NSDictionary)["image_url"] as! String
-            pod.short_audio_url = (snapshot.value as! NSDictionary)["short_audio_url"] as! String
-            pod.complete_audio_url = (snapshot.value as! NSDictionary)["complete_audio_url"] as! String
+//            pod.image_url = (snapshot.value as! NSDictionary)["image_url"] as! String
+//            pod.short_audio_url = (snapshot.value as! NSDictionary)["short_audio_url"] as! String
+//            pod.complete_audio_url = (snapshot.value as! NSDictionary)["complete_audio_url"] as! String
             pod.price = (snapshot.value as! NSDictionary)["price"] as! Double
             pod.detail = (snapshot.value as! NSDictionary)["detail"] as! String
             self.podcasts.append(pod)
@@ -61,7 +61,7 @@ class PodcastsTableViewController: UITableViewController {
             //let url = NSURL(string: pod.image_url!)! as URL
             cell.textLabel?.text = pod.name
             cell.detailTextLabel?.text = pod.detail
-            cell.imageView?.sd_setImage(with: URL(string: pod.image_url!), completed: nil)
+            //cell.imageView?.sd_setImage(with: URL(string: pod.image_url!), completed: nil)
         
         }
 

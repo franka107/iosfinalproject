@@ -15,4 +15,5 @@ class Podcast1 {
     var complete_audio_url: String?
     var price: Double?
     var detail: String?
+    var large_detail: String?
 }
