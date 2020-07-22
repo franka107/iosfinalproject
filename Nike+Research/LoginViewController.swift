@@ -38,12 +38,32 @@ class LoginViewController: UIViewController {
                 print("Inicio de sesion exitoso")
 //                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
                 let alerta = UIAlertController(title: "Iniciando Sesion", message: "Te loguearste con Exito", preferredStyle: .alert)
-
-                //                    self.performSegue(withIdentifier: "registrarSegue", sender: nil)
-
-                let btnOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+                let btnOK = UIAlertAction(title: "OK", style: .default, handler: {(UIAlertAction) in
+                    Database.database().reference().child("usuarios").child(user!.user.uid).observeSingleEvent(of: .value, with: {
+                        (snapshot) in
+                        let value = snapshot.value as? NSDictionary
+                        let userInfo = Userdata()
+                        userInfo.id = user!.user.uid
+                        userInfo.name = value?["name"] as? String ?? ""
+                        userInfo.type = value?["type"] as? String ?? ""
+                        userInfo.imageURL = value?["image"] as? String ?? ""
+                        print(userInfo.type)
+                        //print(snapshot)
+                        if userInfo.type == "user" {
+                            self.performSegue(withIdentifier: "userViewSegue", sender: nil)
+                        }else{
+                            self.performSegue(withIdentifier: "adminViewSegue", sender: nil)
+                        }
+                        
+                    })
+                })
                 alerta.addAction(btnOK)
                 self.present(alerta, animated: true, completion: nil)
+                
+                
+                //                    self.performSegue(withIdentifier: "registrarSegue", sender: nil)
+
+                
             }
         }
     }
@@ -57,5 +77,15 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "userViewSegue" {
+//            let siguienteVC = segue.destination as! AdminViewController
+//            siguienteVC.userInfo = sender as! Userdata
+//        }
+//        if segue.identifier == "adminViewSegue" {
+//            let siguienteVC = segue.destination as! AdminViewController
+//            siguienteVC.userInfo = sender as! Userdata
+//        }
+    }
 
 }

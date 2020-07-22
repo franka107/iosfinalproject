@@ -17,7 +17,7 @@
             <objects>
                 <tableViewController id="1CS-oE-jeF" customClass="FeedTableViewController" customModule="Nike_Research" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="444" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jqb-dJ-dgI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -281,6 +281,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7fw-v6-5Fv"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1200"/>
@@ -340,7 +341,7 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HwN-YX-SiR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
@@ -440,16 +441,134 @@
                     <connections>
                         <outlet property="correoField" destination="lzA-g0-wqd" id="56Y-Xo-gRp"/>
                         <outlet property="passwordField" destination="SLU-PO-SQd" id="8Ji-bL-zTh"/>
+                        <segue destination="WtA-1K-gAP" kind="show" identifier="userViewSegue" id="c36-81-Pox"/>
+                        <segue destination="oEA-op-Vqj" kind="show" identifier="adminViewSegue" id="Ds7-3n-uwi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DY0-v8-2lT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1623.2" y="805.54722638680664"/>
+            <point key="canvasLocation" x="-2049" y="1307"/>
+        </scene>
+        <!--Admin View Controller-->
+        <scene sceneID="797-az-5Af">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="8uq-m9-LGP" customClass="AdminViewController" customModule="Nike_Research" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qtj-bM-Poc"/>
+                        <viewControllerLayoutGuide type="bottom" id="7UM-aV-t1h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EcL-D8-Dzx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu eres el admin cojudo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTy-Db-iyt">
+                                <rect key="frame" x="96" y="152" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="048-l8-Ges"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEL-NG-dXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="2383.3583208395803"/>
+        </scene>
+        <!--Podcasts-->
+        <scene sceneID="0u2-D5-DXu">
+            <objects>
+                <tableViewController id="cIh-oO-IoH" customClass="PodcastsTableViewController" customModule="Nike_Research" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lA4-M3-C5x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="YdJ-p6-4PK" detailTextLabel="ID4-Dx-WLP" style="IBUITableViewCellStyleSubtitle" id="Rqa-hn-MaX">
+                                <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rqa-hn-MaX" id="bWH-bL-1U8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YdJ-p6-4PK">
+                                            <rect key="frame" x="16" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ID4-Dx-WLP">
+                                            <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cIh-oO-IoH" id="K6P-5i-jOn"/>
+                            <outlet property="delegate" destination="cIh-oO-IoH" id="tgg-ev-1me"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Podcasts" id="dax-N3-l2T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eud-pd-dPy">
+                            <connections>
+                                <segue destination="GDV-r8-fT7" kind="show" id="5G3-Td-T3D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxH-AG-dOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49" y="3379"/>
+        </scene>
+        <!--Agregar Podcast-->
+        <scene sceneID="pFa-EP-xMY">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="GDV-r8-fT7" customClass="AddPodcastViewController" customModule="Nike_Research" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ilc-O8-2OI"/>
+                        <viewControllerLayoutGuide type="bottom" id="cbj-9e-9bb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rJh-RY-IPh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Agregar Podcast" id="b96-m3-FCY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57H-Dx-uts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="3376"/>
+        </scene>
+        <!--Podcast-->
+        <scene sceneID="xoP-8G-va4">
+            <objects>
+                <navigationController id="l3R-Ph-AyO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Podcast" id="5JF-6R-RGo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fnQ-W9-TCn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cIh-oO-IoH" kind="relationship" relationship="rootViewController" id="ZXr-3N-7ej"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOr-dQ-E0p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1002" y="3379"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7GX-w9-QPR">
             <objects>
-                <tabBarController id="WtA-1K-gAP" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="WtA-1K-gAP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QoT-fF-oo4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4d3-Hi-yJC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -475,7 +594,7 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HEX-gX-SkO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
@@ -494,7 +613,7 @@
             <objects>
                 <tableViewController id="B6B-g3-JL3" customClass="ShoppingBagTableViewController" customModule="Nike_Research" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" id="9RG-Of-vZa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
@@ -756,7 +875,7 @@
             <objects>
                 <tableViewController id="7jD-9Q-sTJ" customClass="CheckoutTableViewController" customModule="Nike_Research" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" id="rzq-Hi-AJo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="880"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
@@ -1053,7 +1172,7 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DWb-Q5-fPB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
@@ -1072,7 +1191,7 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hsH-sL-prw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
@@ -1082,6 +1201,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1f-kA-Awz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="462" y="1626"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="682-CT-H5b">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="oEA-op-Vqj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="mpo-Eh-wPt"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ald-t3-s15">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="l3R-Ph-AyO" kind="relationship" relationship="viewControllers" id="icX-iC-T8Z"/>
+                        <segue destination="Nq5-8V-MzS" kind="relationship" relationship="viewControllers" id="43A-Fd-goG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRM-zg-7Qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Item" id="ZPz-au-46p"/>
+            </objects>
+            <point key="canvasLocation" x="-770.39999999999998" y="2383.3583208395803"/>
+        </scene>
+        <!--Perfil-->
+        <scene sceneID="XrH-ZO-sRT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Nq5-8V-MzS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Perfil" selectedImage="icon-home" id="UAB-su-EZR">
+                        <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4le-BQ-hvB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8uq-m9-LGP" kind="relationship" relationship="rootViewController" id="RFf-JM-nx8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8R-S9-fNC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="2383.3583208395803"/>
         </scene>
     </scenes>
     <resources>

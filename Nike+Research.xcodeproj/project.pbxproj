@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		301F722A24C7DCD2003B3A0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 301F722924C7DCD2003B3A0B /* GoogleService-Info.plist */; };
 		301F722C24C7E3B9003B3A0B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301F722B24C7E3B9003B3A0B /* LoginViewController.swift */; };
+		30BB998A24C8107300C3804E /* Userdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB998924C8107300C3804E /* Userdata.swift */; };
+		30BB998C24C826A700C3804E /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB998B24C826A700C3804E /* AdminViewController.swift */; };
+		30BB998E24C8388000C3804E /* PodcastsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB998D24C8388000C3804E /* PodcastsTableViewController.swift */; };
+		30BB999024C8397E00C3804E /* AddPodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB998F24C8397E00C3804E /* AddPodcastViewController.swift */; };
+		30BB999224C83B1F00C3804E /* FilePodcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BB999124C83B1F00C3804E /* FilePodcast.swift */; };
 		52E3D2121E7F0D990064B02E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3D2111E7F0D990064B02E /* AppDelegate.swift */; };
 		52E3D2141E7F0D990064B02E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3D2131E7F0D990064B02E /* ViewController.swift */; };
 		52E3D2171E7F0D990064B02E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E3D2151E7F0D990064B02E /* Main.storyboard */; };
@@ -33,6 +38,11 @@
 		0EEEF175A8FEDF142981195D /* Pods-Nike+Research.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike+Research.debug.xcconfig"; path = "Target Support Files/Pods-Nike+Research/Pods-Nike+Research.debug.xcconfig"; sourceTree = "<group>"; };
 		301F722924C7DCD2003B3A0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		301F722B24C7E3B9003B3A0B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		30BB998924C8107300C3804E /* Userdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userdata.swift; sourceTree = "<group>"; };
+		30BB998B24C826A700C3804E /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		30BB998D24C8388000C3804E /* PodcastsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsTableViewController.swift; sourceTree = "<group>"; };
+		30BB998F24C8397E00C3804E /* AddPodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPodcastViewController.swift; sourceTree = "<group>"; };
+		30BB999124C83B1F00C3804E /* FilePodcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePodcast.swift; sourceTree = "<group>"; };
 		52E3D20E1E7F0D990064B02E /* Nike+Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike+Research.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E3D2111E7F0D990064B02E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E3D2131E7F0D990064B02E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +128,9 @@
 				52E3D21A1E7F0D990064B02E /* LaunchScreen.storyboard */,
 				52E3D21D1E7F0D990064B02E /* Info.plist */,
 				301F722B24C7E3B9003B3A0B /* LoginViewController.swift */,
+				30BB998B24C826A700C3804E /* AdminViewController.swift */,
+				30BB998D24C8388000C3804E /* PodcastsTableViewController.swift */,
+				30BB998F24C8397E00C3804E /* AddPodcastViewController.swift */,
 			);
 			path = "Nike+Research";
 			sourceTree = "<group>";
@@ -146,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				52E3D2231E7F0DAD0064B02E /* Shoe.swift */,
+				30BB998924C8107300C3804E /* Userdata.swift */,
+				30BB999124C83B1F00C3804E /* FilePodcast.swift */,
 			);
 			name = MODEL;
 			sourceTree = "<group>";
@@ -325,6 +340,9 @@
 			files = (
 				52E3D2371E7F53910064B02E /* SuggestionCollectionViewCell.swift in Sources */,
 				52E3D2241E7F0DAD0064B02E /* Shoe.swift in Sources */,
+				30BB999024C8397E00C3804E /* AddPodcastViewController.swift in Sources */,
+				30BB998C24C826A700C3804E /* AdminViewController.swift in Sources */,
+				30BB998A24C8107300C3804E /* Userdata.swift in Sources */,
 				52F7B6131E7F955D00735A46 /* ShoppingBagTableViewController.swift in Sources */,
 				301F722C24C7E3B9003B3A0B /* LoginViewController.swift in Sources */,
 				52E3D2351E7F442B0064B02E /* ShoeDetailCell.swift in Sources */,
@@ -333,10 +351,12 @@
 				52FDBCE31E87718D00A59876 /* ShoeImageViewController.swift in Sources */,
 				52E3D2121E7F0D990064B02E /* AppDelegate.swift in Sources */,
 				52E3D2281E7F14320064B02E /* FeedShoeTableViewCell.swift in Sources */,
+				30BB998E24C8388000C3804E /* PodcastsTableViewController.swift in Sources */,
 				52E3D2261E7F136C0064B02E /* FeedTableViewController.swift in Sources */,
 				52FDBCE71E877B0A00A59876 /* ShoeImagesHeaderView.swift in Sources */,
 				52E3D22E1E7F32FD0064B02E /* ShoeDetailTableViewController.swift in Sources */,
 				52E3D2391E7F53EB0064B02E /* SuggestionTableViewCell.swift in Sources */,
+				30BB999224C83B1F00C3804E /* FilePodcast.swift in Sources */,
 				52F7B6161E7F9F7E00735A46 /* CheckoutTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
