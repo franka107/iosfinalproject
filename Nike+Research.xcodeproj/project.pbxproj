@@ -26,7 +26,6 @@
 		52FDBCE31E87718D00A59876 /* ShoeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDBCE21E87718D00A59876 /* ShoeImageViewController.swift */; };
 		52FDBCE51E8771FB00A59876 /* ShoeImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDBCE41E8771FB00A59876 /* ShoeImagesPageViewController.swift */; };
 		52FDBCE71E877B0A00A59876 /* ShoeImagesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDBCE61E877B0A00A59876 /* ShoeImagesHeaderView.swift */; };
-<<<<<<< HEAD
 		79DD2083A3397D3D0AEABE35 /* Pods_Nike_Research.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F52960F8E043774F24BDC6 /* Pods_Nike_Research.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,13 +34,6 @@
 		0EEEF175A8FEDF142981195D /* Pods-Nike+Research.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike+Research.debug.xcconfig"; path = "Target Support Files/Pods-Nike+Research/Pods-Nike+Research.debug.xcconfig"; sourceTree = "<group>"; };
 		301F722924C7DCD2003B3A0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52E3D20E1E7F0D990064B02E /* Nike+Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike+Research.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-=======
-		B17AE17F24C7DB2800FF7101 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = B17AE17E24C7DB2800FF7101 /* splash.json */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		52E3D20E1E7F0D990064B02E /* Blabla Podcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blabla Podcast.app"; sourceTree = BUILT_PRODUCTS_DIR; };
->>>>>>> origin/Icon
 		52E3D2111E7F0D990064B02E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E3D2131E7F0D990064B02E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52E3D2161E7F0D990064B02E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,15 +52,8 @@
 		52FDBCE21E87718D00A59876 /* ShoeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeImageViewController.swift; sourceTree = "<group>"; };
 		52FDBCE41E8771FB00A59876 /* ShoeImagesPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeImagesPageViewController.swift; sourceTree = "<group>"; };
 		52FDBCE61E877B0A00A59876 /* ShoeImagesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeImagesHeaderView.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		B9DEB73486AA91A02A1BB435 /* Pods-Nike+Research.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike+Research.release.xcconfig"; path = "Target Support Files/Pods-Nike+Research/Pods-Nike+Research.release.xcconfig"; sourceTree = "<group>"; };
 		E9F52960F8E043774F24BDC6 /* Pods_Nike_Research.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nike_Research.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-=======
-		6468D245F10586A71F88A807 /* Pods-Nike+Research.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike+Research.release.xcconfig"; path = "Target Support Files/Pods-Nike+Research/Pods-Nike+Research.release.xcconfig"; sourceTree = "<group>"; };
-		B17AE17E24C7DB2800FF7101 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
-		C98A83F3B9DC20EE78E2253D /* Pods_Nike_Research.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nike_Research.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB7F6920937FCEC1848F3235 /* Pods-Nike+Research.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike+Research.debug.xcconfig"; path = "Target Support Files/Pods-Nike+Research/Pods-Nike+Research.debug.xcconfig"; sourceTree = "<group>"; };
->>>>>>> origin/Icon
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,35 +61,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				79DD2083A3397D3D0AEABE35 /* Pods_Nike_Research.framework in Frameworks */,
-=======
-				1111804EE2F9EFE6CD6BB26D /* Pods_Nike_Research.framework in Frameworks */,
->>>>>>> origin/Icon
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
 		1101B8A1CF88F3E0B2E3EF32 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0EEEF175A8FEDF142981195D /* Pods-Nike+Research.debug.xcconfig */,
 				B9DEB73486AA91A02A1BB435 /* Pods-Nike+Research.release.xcconfig */,
-=======
-		437F4BC3F9D995181D89A70B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CB7F6920937FCEC1848F3235 /* Pods-Nike+Research.debug.xcconfig */,
-				6468D245F10586A71F88A807 /* Pods-Nike+Research.release.xcconfig */,
->>>>>>> origin/Icon
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		41359ABE7166AE0F72DE4233 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,20 +85,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-=======
->>>>>>> origin/Icon
 		52E3D2051E7F0D990064B02E = {
 			isa = PBXGroup;
 			children = (
 				52E3D2101E7F0D990064B02E /* Nike+Research */,
 				52E3D20F1E7F0D990064B02E /* Products */,
-<<<<<<< HEAD
 				1101B8A1CF88F3E0B2E3EF32 /* Pods */,
 				41359ABE7166AE0F72DE4233 /* Frameworks */,
-=======
-				437F4BC3F9D995181D89A70B /* Pods */,
-				6867E16062C830E1341DC961 /* Frameworks */,
->>>>>>> origin/Icon
 			);
 			sourceTree = "<group>";
 		};
@@ -141,11 +106,7 @@
 		52E3D2101E7F0D990064B02E /* Nike+Research */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				301F722924C7DCD2003B3A0B /* GoogleService-Info.plist */,
-=======
-				B17AE17E24C7DB2800FF7101 /* splash.json */,
->>>>>>> origin/Icon
 				52E3D2111E7F0D990064B02E /* AppDelegate.swift */,
 				52E3D2131E7F0D990064B02E /* ViewController.swift */,
 				52E3D2151E7F0D990064B02E /* Main.storyboard */,
@@ -224,20 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52E3D2201E7F0D990064B02E /* Build configuration list for PBXNativeTarget "Nike+Research" */;
 			buildPhases = (
-<<<<<<< HEAD
 				D188FEF1F0DB05F2F8AFF0E7 /* [CP] Check Pods Manifest.lock */,
 				52E3D20A1E7F0D990064B02E /* Sources */,
 				52E3D20B1E7F0D990064B02E /* Frameworks */,
 				52E3D20C1E7F0D990064B02E /* Resources */,
 				3FC5682B81D64090141635DA /* [CP] Embed Pods Frameworks */,
 				8F3D0139B2D3E4EC018FF688 /* [CP] Copy Pods Resources */,
-=======
-				DE9D5D8522440A24D67B20F0 /* [CP] Check Pods Manifest.lock */,
-				52E3D20A1E7F0D990064B02E /* Sources */,
-				52E3D20B1E7F0D990064B02E /* Frameworks */,
-				52E3D20C1E7F0D990064B02E /* Resources */,
-				51515EB818957F761F0491F0 /* [CP] Embed Pods Frameworks */,
->>>>>>> origin/Icon
 			);
 			buildRules = (
 			);
@@ -291,11 +244,7 @@
 			files = (
 				52E3D21C1E7F0D990064B02E /* LaunchScreen.storyboard in Resources */,
 				52E3D2191E7F0D990064B02E /* Assets.xcassets in Resources */,
-<<<<<<< HEAD
 				301F722A24C7DCD2003B3A0B /* GoogleService-Info.plist in Resources */,
-=======
-				B17AE17F24C7DB2800FF7101 /* splash.json in Resources */,
->>>>>>> origin/Icon
 				52E3D2171E7F0D990064B02E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,18 +252,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-<<<<<<< HEAD
 		3FC5682B81D64090141635DA /* [CP] Embed Pods Frameworks */ = {
-=======
-		51515EB818957F761F0491F0 /* [CP] Embed Pods Frameworks */ = {
->>>>>>> origin/Icon
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Nike+Research/Pods-Nike+Research-frameworks.sh",
-<<<<<<< HEAD
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -334,20 +278,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-=======
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
->>>>>>> origin/Icon
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nike+Research/Pods-Nike+Research-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-<<<<<<< HEAD
 		8F3D0139B2D3E4EC018FF688 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,9 +303,6 @@
 			showEnvVarsInLog = 0;
 		};
 		D188FEF1F0DB05F2F8AFF0E7 /* [CP] Check Pods Manifest.lock */ = {
-=======
-		DE9D5D8522440A24D67B20F0 /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> origin/Icon
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -533,46 +466,28 @@
 		};
 		52E3D2211E7F0D990064B02E /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 0EEEF175A8FEDF142981195D /* Pods-Nike+Research.debug.xcconfig */;
-=======
-			baseConfigurationReference = CB7F6920937FCEC1848F3235 /* Pods-Nike+Research.debug.xcconfig */;
->>>>>>> origin/Icon
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 593ZXM85A3;
 				INFOPLIST_FILE = "Nike+Research/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.quieroaprobar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = "co.ductran.Nike-Demo";
-				PRODUCT_NAME = "Blabla Podcast";
->>>>>>> origin/Icon
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		52E3D2221E7F0D990064B02E /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = B9DEB73486AA91A02A1BB435 /* Pods-Nike+Research.release.xcconfig */;
-=======
-			baseConfigurationReference = 6468D245F10586A71F88A807 /* Pods-Nike+Research.release.xcconfig */;
->>>>>>> origin/Icon
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 593ZXM85A3;
 				INFOPLIST_FILE = "Nike+Research/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.quieroaprobar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = "co.ductran.Nike-Demo";
-				PRODUCT_NAME = "Blabla Podcast";
->>>>>>> origin/Icon
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
