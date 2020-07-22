@@ -354,10 +354,10 @@
             </objects>
             <point key="canvasLocation" x="526" y="-429"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Fq5-mh-rE4">
             <objects>
-                <viewController id="Zg8-1e-QZ2" sceneMemberID="viewController">
+                <viewController id="Zg8-1e-QZ2" customClass="LoginViewController" customModule="Nike_Research" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0GJ-0Q-qZ7"/>
                         <viewControllerLayoutGuide type="bottom" id="qMw-Hl-QQi"/>
@@ -410,6 +410,9 @@
                                 <state key="normal" title="Ingresar">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="Zg8-1e-QZ2" eventType="touchUpInside" id="bFy-jv-NTh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -428,6 +431,10 @@
                             <constraint firstItem="E81-7k-sl1" firstAttribute="centerX" secondItem="1kq-GS-Kiz" secondAttribute="centerX" id="ubW-2P-Veu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="correoField" destination="lzA-g0-wqd" id="56Y-Xo-gRp"/>
+                        <outlet property="passwordField" destination="SLU-PO-SQd" id="8Ji-bL-zTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DY0-v8-2lT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
