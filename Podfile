@@ -15,4 +15,6 @@ target 'Nike+Research' do
   pod 'GoogleSignIn'
   pod 'Firebase/Database'
   pod 'SDWebImage'
+  pod "TextFieldFloatingPlaceholder"
+  pod 'TransitionButton'
 end
