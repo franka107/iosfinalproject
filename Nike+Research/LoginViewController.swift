@@ -99,32 +99,6 @@ class LoginViewController: UIViewController {
                 
             }else{
                 print("Inicio de sesion exitoso")
-//                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
-                let alerta = UIAlertController(title: "Iniciando Sesion", message: "Te loguearste con Exito", preferredStyle: .alert)
-                let btnOK = UIAlertAction(title: "OK", style: .default, handler: {(UIAlertAction) in
-                    Database.database().reference().child("usuarios").child(user!.user.uid).observeSingleEvent(of: .value, with: {
-                        (snapshot) in
-                        let value = snapshot.value as? NSDictionary
-                        let userInfo = Userdata()
-                        userInfo.id = user!.user.uid
-                        userInfo.name = value?["name"] as? String ?? ""
-                        userInfo.type = value?["type"] as? String ?? ""
-                        userInfo.imageURL = value?["image"] as? String ?? ""
-                        print(userInfo.type)
-                        //print(snapshot)
-                        if userInfo.type == "user" {
-                            self.performSegue(withIdentifier: "userViewSegue", sender: nil)
-                        }else{
-                            self.performSegue(withIdentifier: "adminViewSegue", sender: nil)
-                        }
-                        
-                    })
-                })
-                alerta.addAction(btnOK)
-                self.present(alerta, animated: true, completion: nil)
-                
-                
-                //                    self.performSegue(withIdentifier: "registrarSegue", sender: nil)
 
                 self.button.startAnimation()
                 let qualityOfServiceClass = DispatchQoS.QoSClass.background
@@ -134,13 +108,26 @@ class LoginViewController: UIViewController {
                     sleep(3)
                     
                     DispatchQueue.main.async(execute: { () -> Void in
-
+                        
+            
                         self.button.stopAnimation(animationStyle: .expand, completion: {
-                            let alerta = UIAlertController(title: "Iniciando Sesion", message: "Te loguearste con Exito", preferredStyle: .alert)
-
-                            let btnOK = UIAlertAction(title: "OK", style: .default, handler: nil)
-                            alerta.addAction(btnOK)
-                            self.present(alerta, animated: true, completion: nil)
+                            Database.database().reference().child("usuarios").child(user!.user.uid).observeSingleEvent(of: .value, with: {
+                                (snapshot) in
+                                let value = snapshot.value as? NSDictionary
+                                let userInfo = Userdata()
+                                userInfo.id = user!.user.uid
+                                userInfo.name = value?["name"] as? String ?? ""
+                                userInfo.type = value?["type"] as? String ?? ""
+                                userInfo.imageURL = value?["image"] as? String ?? ""
+                                print(userInfo.type)
+                                //print(snapshot)
+                                if userInfo.type == "user" {
+                                    self.performSegue(withIdentifier: "userViewSegue", sender: nil)
+                                }else{
+                                    self.performSegue(withIdentifier: "adminViewSegue", sender: nil)
+                                }
+                                
+                            })
                         })
                     })
                 })

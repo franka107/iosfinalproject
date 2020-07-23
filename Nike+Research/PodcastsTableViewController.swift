@@ -23,7 +23,7 @@ class PodcastsTableViewController: UITableViewController {
 //            pod.image_url = (snapshot.value as! NSDictionary)["image_url"] as! String
 //            pod.short_audio_url = (snapshot.value as! NSDictionary)["short_audio_url"] as! String
 //            pod.complete_audio_url = (snapshot.value as! NSDictionary)["complete_audio_url"] as! String
-            pod.price = (snapshot.value as! NSDictionary)["price"] as! Double
+            //pod.price = (snapshot.value as! NSDictionary)["price"] as! Double
             pod.detail = (snapshot.value as! NSDictionary)["detail"] as! String
             self.podcasts.append(pod)
             self.tableView.reloadData()
@@ -68,7 +68,10 @@ class PodcastsTableViewController: UITableViewController {
         return cell
     }
     
-
+    @IBAction func SignOutAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

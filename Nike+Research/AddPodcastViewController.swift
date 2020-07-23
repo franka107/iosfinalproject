@@ -10,6 +10,8 @@ import UIKit
 import AVFoundation
 import Firebase
 import SDWebImage
+import FirebaseStorage
+import FirebaseDatabase
 
 class AddPodcastViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -19,6 +21,10 @@ class AddPodcastViewController: UIViewController, UIImagePickerControllerDelegat
     var actionbutton = false
     
     var imagePicker = UIImagePickerController()
+    
+    var pod = Podcast1()
+    
+    var imagenesFolder = Storage.storage().reference().child("podcasts")
 
     @IBOutlet weak var imagePodField: UIImageView!
     @IBOutlet weak var recordButton: UIButton!
@@ -67,63 +73,17 @@ class AddPodcastViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var pricePodField: UITextField!
     
     @IBAction func AddPodcast(_ sender: Any) {
-        let pod = Podcast1()
-        pod.name = namePodField.text!
-        pod.detail = detailPodField.text!
-        pod.large_detail = largeDetailPodField.text!
-        pod.price = Double(pricePodField.text!)
-//        pod.image_url =
-//        pod.short_audio_url =
-//        pod.complete_audio_url =
+        self.pod.name = namePodField.text!
+        self.pod.detail = detailPodField.text!
+        self.pod.large_detail = largeDetailPodField.text!
+        self.pod.price = Double(pricePodField.text!)
+        self.camera()
+        self.auidio()
         
-        let imagenesFolder = Storage.storage().reference().child("podcasts")
-        let imagenData = UIImageJPEGRepresentation((imagePodField?.image)!, 0.50)
-        let audioData = NSData(contentsOf: audioURL!)! as Data
-        let cargarImagen = imagenesFolder.child("\(NSUUID().uuidString).jpg")
-        cargarImagen.putData(imagenData!, metadata: nil){
-            (metada, error) in
-            if error != nil {
-                // self.mostrarAlerta(titulo: "Error", mensaje: "Seprodujo un erro al subvir la image. Verifique su conexion de internet y vuelva a intentarlo", accion: "Aceptar")
-                print("Ocurrio un errore al subir imagen: \(error!) ")
-                return
-            }else{
-                cargarImagen.downloadURL(completion: {(url, error) in
-                    guard let enlaceURL = url else {
-                        //self.mostrarAlerta(titulo: "Error", mensaje: "Se produjo un error al obtener informacion de imagen", accion: "Cancelar")
-                        print("Ocurrio un error al obtener informacion de imagen \(error!)")
-                        return
-                    }
-                    pod.image_url = url?.absoluteString
-                    print("imagen listo")
-                    
-                })
-                
-            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            let podCast = ["name": self.pod.name, "detail": self.pod.detail, "large_detail": self.pod.large_detail, "price": self.pod.price, "image_url": self.pod.image_url, "complete_audio_url": self.pod.complete_audio_url, "short_audio_url": self.pod.short_audio_url ] as [String : Any]
+            Database.database().reference().child("podcasts").childByAutoId().setValue(podCast)
         }
-        let cargarAudio = imagenesFolder.child("\(NSUUID().uuidString).m4a")
-        cargarAudio.putData(audioData, metadata: nil){
-            (metada, error) in
-            if error != nil {
-                // self.mostrarAlerta(titulo: "Error", mensaje: "Seprodujo un erro al subvir la image. Verifique su conexion de internet y vuelva a intentarlo", accion: "Aceptar")
-                print("Ocurrio un errore al subir audio: \(error!) ")
-                return
-            }else{
-                cargarImagen.downloadURL(completion: {(url, error) in
-                    guard let enlaceURL = url else {
-                        //self.mostrarAlerta(titulo: "Error", mensaje: "Se produjo un error al obtener informacion de imagen", accion: "Cancelar")
-                        print("Ocurrio un error al obtener informacion de imagen \(error!)")
-                        return
-                    }
-                    print("audio listo")
-                    pod.complete_audio_url = url?.absoluteString
-                    pod.short_audio_url = url?.absoluteString
-                })
-                
-            }
-        }
-        let podCast = ["name": pod.name, "detail": pod.detail, "large_detail": pod.large_detail, "price": pod.price, "image_url": pod.image_url, "complete_audio_url": pod.complete_audio_url, "short_audio_url": pod.short_audio_url ] as [String : Any]
-        Database.database().reference().child("podcasts").childByAutoId().setValue(podCast)
-            
             
         navigationController!.popViewController(animated: true)
     }
@@ -172,15 +132,66 @@ class AddPodcastViewController: UIViewController, UIImagePickerControllerDelegat
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func camera() {
+        let imagenData = UIImageJPEGRepresentation((imagePodField?.image)!, 0.50)
+        let cargarImagen = self.imagenesFolder.child("\(NSUUID().uuidString).jpg")
+        cargarImagen.putData(imagenData!, metadata: nil){
+            (metada, error) in
+            if error != nil {
+                // self.mostrarAlerta(titulo: "Error", mensaje: "Seprodujo un erro al subvir la image. Verifique su conexion de internet y vuelva a intentarlo", accion: "Aceptar")
+                print("Ocurrio un errore al subir imagen: \(error!) ")
+                return
+            }else{
+                cargarImagen.downloadURL(completion: {(url, error) in
+                    guard let enlaceURL = url else {
+                        //self.mostrarAlerta(titulo: "Error", mensaje: "Se produjo un error al obtener informacion de imagen", accion: "Cancelar")
+                        print("Ocurrio un error al obtener informacion de imagen \(error!)")
+                        return
+                    }
+                    self.pod.image_url = url?.absoluteString
+                    print("imagen listo \(self.pod.image_url!)")
+                })
+            }
+        }
     }
-    */
+    func auidio() {
+        let audioData = NSData(contentsOf: audioURL!)! as Data
+        let cargarAudio = self.imagenesFolder.child("\(NSUUID().uuidString).m4a")
+        cargarAudio.putData(audioData, metadata: nil){
+            (metada, error) in
+            if error != nil {
+                // self.mostrarAlerta(titulo: "Error", mensaje: "Seprodujo un erro al subvir la image. Verifique su conexion de internet y vuelva a intentarlo", accion: "Aceptar")
+                print("Ocurrio un errore al subir audio: \(error!) ")
+                return
+            }else{
+                cargarAudio.downloadURL(completion: {(url, error) in
+                    guard let enlaceURL = url else {
+                        //self.mostrarAlerta(titulo: "Error", mensaje: "Se produjo un error al obtener informacion de imagen", accion: "Cancelar")
+                        print("Ocurrio un error al obtener informacion de imagen \(error!)")
+                        return
+                    }
+                    self.pod.complete_audio_url = url?.absoluteString
+                    self.pod.short_audio_url = url?.absoluteString
+                    print("audio listo \(self.pod.complete_audio_url!)")
+                })
 
+            }
+        }
+    }
 }
+//let alertaCarga = UIAlertController(title: "Cargando Archivos ...", message: "0%", preferredStyle: .alert)
+//       let progresoCarga:UIProgressView = UIProgressView(progressViewStyle: .default)
+//
+//       cargarImagen.observe(.progress){(snapshot) in
+//           let porcentaje = Double(snapshot.progress!.completedUnitCount) / Double(snapshot.progress!.totalUnitCount)
+//           progresoCarga.setProgress(Float(porcentaje), animated: true)
+//           progresoCarga.frame = CGRect(x:10, y:70, width:250, height:0)
+//           alertaCarga.message = String(round(porcentaje*100.0)) + "%"
+//           if porcentaje>=1.0{
+//               alertaCarga.dismiss(animated: true, completion: nil)
+//           }
+//       }
+//       let btnOk = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+//       alertaCarga.addAction(btnOk)
+//       alertaCarga.view.addSubview(progresoCarga)
+//       present(alertaCarga, animated: true, completion: nil)
