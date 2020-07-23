@@ -14,7 +14,7 @@ class FeedShoeTableViewCell : UITableViewCell
     @IBOutlet weak var shoeNameLabel: UILabel!
     @IBOutlet weak var shoePriceLabel: UILabel!
     
-    var shoe: Shoe! {
+    var podcast: Podcast2!{
         didSet {
             self.updateUI()
         }
@@ -22,12 +22,12 @@ class FeedShoeTableViewCell : UITableViewCell
     
     func updateUI()
     {
-        shoeImageView.image = shoe.images?.first
-        shoeNameLabel.text = shoe.name
-        if let price = shoe.price {
-            shoePriceLabel.text = "$\(price)"
-        } else {
-            shoePriceLabel.text = ""
-        }
+        //shoeImageView.image = podcast.images?.first
+        print("AQUI EL URL\(podcast.image_url)")
+        shoeImageView?.sd_setImage(with: URL(string: podcast.image_url))
+        shoeNameLabel?.text = podcast.name
+       
+        shoePriceLabel.text = "$\(podcast.price)"
+        
     }
 }

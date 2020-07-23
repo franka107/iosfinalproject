@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ShoeDetailTableViewController : UITableViewController
 {
-    var shoe: Shoe!
+    var pod: Podcast2!
     
+    @IBOutlet weak var imageProducDetail: UIView!
     @IBOutlet weak var shoeImagesHeaderView: ShoeImagesHeaderView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = shoe.name
-        
+        title = pod.name
+        //imageProducDetail.sd_setImage(with: URL(string: pod.image_url))
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -38,7 +40,7 @@ class ShoeDetailTableViewController : UITableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Storyboard.showImagesPageVC {
             if let imagesPageVC = segue.destination as? ShoeImagesPageViewController {
-                imagesPageVC.images = shoe.images
+               // imagesPageVC.images = pod.image_url
                 imagesPageVC.pageViewControllerDelegate = shoeImagesHeaderView
             }
         }
@@ -59,7 +61,7 @@ extension ShoeDetailTableViewController
     {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.shoeDetailCell, for: indexPath) as! ShoeDetailCell
-            cell.shoe = shoe
+            cell.shoe = pod
             cell.selectionStyle = .none
             
             return cell
@@ -111,7 +113,9 @@ extension ShoeDetailTableViewController: UICollectionViewDataSource
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.suggestionCell, for: indexPath) as! SuggestionCollectionViewCell
         let shoes = Shoe.fetchShoes()
+        let pods = Podcast2.fetchPodcast()
         cell.image = shoes[indexPath.item].images?.first
+        //cell.image.sd_setImage(with: URL(string: pod.image_url))
         
         return cell
     }

@@ -13,7 +13,7 @@ class ShoeDetailCell : UITableViewCell
     @IBOutlet weak var shoeNameLabel: UILabel!
     @IBOutlet weak var shoeDescriptionLabel: UILabel!
     
-    var shoe: Shoe! {
+    var shoe: Podcast2! {
         didSet {
             self.updateUI()
         }
@@ -22,6 +22,6 @@ class ShoeDetailCell : UITableViewCell
     func updateUI()
     {
         shoeNameLabel.text = shoe.name
-        shoeDescriptionLabel.text = shoe.description
+        shoeDescriptionLabel.text = shoe.detail
     }
 }
