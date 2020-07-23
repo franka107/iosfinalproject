@@ -16,4 +16,6 @@ class Podcast1 {
     var price: Double?
     var detail: String?
     var large_detail: String?
+    var imageID: String?
+    var audioID: String?
 }

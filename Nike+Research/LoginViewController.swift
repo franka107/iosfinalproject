@@ -104,30 +104,28 @@ class LoginViewController: UIViewController {
                 let qualityOfServiceClass = DispatchQoS.QoSClass.background
                 let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
                 backgroundQueue.async(execute: {
-                    
                     sleep(3)
                     
                     DispatchQueue.main.async(execute: { () -> Void in
-                        
-            
-                        self.button.stopAnimation(animationStyle: .expand, completion: {
-                            Database.database().reference().child("usuarios").child(user!.user.uid).observeSingleEvent(of: .value, with: {
-                                (snapshot) in
-                                let value = snapshot.value as? NSDictionary
-                                let userInfo = Userdata()
-                                userInfo.id = user!.user.uid
-                                userInfo.name = value?["name"] as? String ?? ""
-                                userInfo.type = value?["type"] as? String ?? ""
-                                userInfo.imageURL = value?["image"] as? String ?? ""
-                                print(userInfo.type)
-                                //print(snapshot)
-                                if userInfo.type == "user" {
+                        Database.database().reference().child("usuarios").child(user!.user.uid).observeSingleEvent(of: .value, with: {
+                            (snapshot) in
+                            let value = snapshot.value as? NSDictionary
+                            let userInfo = Userdata()
+                            userInfo.id = user!.user.uid
+                            userInfo.name = value?["name"] as? String ?? ""
+                            userInfo.type = value?["type"] as? String ?? ""
+                            userInfo.imageURL = value?["image"] as? String ?? ""
+                            print(userInfo.type)
+                            //print(snapshot)
+                            if userInfo.type == "user" {
+                                self.button.stopAnimation(animationStyle: .expand, completion: {
                                     self.performSegue(withIdentifier: "userViewSegue", sender: nil)
-                                }else{
+                                })
+                            }else{
+                                self.button.stopAnimation(animationStyle: .expand, completion: {
                                     self.performSegue(withIdentifier: "adminViewSegue", sender: nil)
-                                }
-                                
-                            })
+                                })
+                            }
                         })
                     })
                 })

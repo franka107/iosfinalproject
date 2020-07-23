@@ -9,24 +9,52 @@
 import UIKit
 import Firebase
 import SDWebImage
+import TransitionButton
 
-class PodcastsTableViewController: UITableViewController {
+class PodcastsTableViewController: UITableViewController{
     
     var podcasts:[Podcast1] = []
-
+    var cont = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         Database.database().reference().child("podcasts").observe(DataEventType.childAdded, with: { (snapshot) in
             let pod = Podcast1()
             pod.uid = snapshot.key
             pod.name = (snapshot.value as! NSDictionary)["name"] as! String
-//            pod.image_url = (snapshot.value as! NSDictionary)["image_url"] as! String
-//            pod.short_audio_url = (snapshot.value as! NSDictionary)["short_audio_url"] as! String
-//            pod.complete_audio_url = (snapshot.value as! NSDictionary)["complete_audio_url"] as! String
-            //pod.price = (snapshot.value as! NSDictionary)["price"] as! Double
             pod.detail = (snapshot.value as! NSDictionary)["detail"] as! String
+            pod.large_detail = (snapshot.value as! NSDictionary)["large_detail"] as! String
+            pod.short_audio_url = (snapshot.value as! NSDictionary)["short_audio_url"] as! String
+            pod.complete_audio_url = (snapshot.value as! NSDictionary)["complete_audio_url"] as! String
+            pod.image_url = (snapshot.value as! NSDictionary)["image_url"] as! String
+            pod.price = (snapshot.value as! NSDictionary)["price"] as! Double
+            pod.imageID = (snapshot.value as! NSDictionary)["imageID"] as! String
+            pod.audioID = (snapshot.value as! NSDictionary)["audioID"] as! String
             self.podcasts.append(pod)
             self.tableView.reloadData()
+            print(pod.price)
+            print(pod.audioID)
+            print(pod.imageID)
+            print(pod.name)
+        })
+        
+        Database.database().reference().child("podcasts").observe(DataEventType.childChanged, with: { (snapshot) in
+            self.cont = 0
+            for podEdit in self.podcasts {
+                if podEdit.uid == snapshot.key {
+                    podEdit.name = (snapshot.value as! NSDictionary)["name"] as! String
+                    podEdit.detail = (snapshot.value as! NSDictionary)["detail"] as! String
+                    podEdit.large_detail = (snapshot.value as! NSDictionary)["large_detail"] as! String
+                    podEdit.short_audio_url = (snapshot.value as! NSDictionary)["short_audio_url"] as! String
+                    podEdit.complete_audio_url = (snapshot.value as! NSDictionary)["complete_audio_url"] as! String
+                    podEdit.image_url = (snapshot.value as! NSDictionary)["image_url"] as! String
+                    podEdit.price = (snapshot.value as! NSDictionary)["price"] as! Double
+                    podEdit.imageID = (snapshot.value as! NSDictionary)["imageID"] as! String
+                    podEdit.audioID = (snapshot.value as! NSDictionary)["audioID"] as! String
+                    self.tableView.reloadData()
+                
+                self.cont = self.cont + 1
+                }
+            }
         })
 
     }
@@ -34,7 +62,6 @@ class PodcastsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -68,53 +95,24 @@ class PodcastsTableViewController: UITableViewController {
         return cell
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pod = podcasts[indexPath.row]
+        performSegue(withIdentifier: "editarsegue", sender: pod)
+        
+    }
+    
     @IBAction func SignOutAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "editarsegue"{
+            let siguienteVC = segue.destination as! AddPodcastViewController
+            siguienteVC.podEdit = sender as? Podcast1
+        }
     }
-    */
-
 }
