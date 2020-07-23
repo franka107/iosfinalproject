@@ -34,6 +34,7 @@
 		52FDBCE51E8771FB00A59876 /* ShoeImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDBCE41E8771FB00A59876 /* ShoeImagesPageViewController.swift */; };
 		52FDBCE71E877B0A00A59876 /* ShoeImagesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FDBCE61E877B0A00A59876 /* ShoeImagesHeaderView.swift */; };
 		79DD2083A3397D3D0AEABE35 /* Pods_Nike_Research.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F52960F8E043774F24BDC6 /* Pods_Nike_Research.framework */; };
+		B1F9832124CA07F300279DEE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F9832024CA07F300279DEE /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		52FDBCE21E87718D00A59876 /* ShoeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeImageViewController.swift; sourceTree = "<group>"; };
 		52FDBCE41E8771FB00A59876 /* ShoeImagesPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeImagesPageViewController.swift; sourceTree = "<group>"; };
 		52FDBCE61E877B0A00A59876 /* ShoeImagesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeImagesHeaderView.swift; sourceTree = "<group>"; };
+		B1F9832024CA07F300279DEE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B9DEB73486AA91A02A1BB435 /* Pods-Nike+Research.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nike+Research.release.xcconfig"; path = "Target Support Files/Pods-Nike+Research/Pods-Nike+Research.release.xcconfig"; sourceTree = "<group>"; };
 		E9F52960F8E043774F24BDC6 /* Pods_Nike_Research.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nike_Research.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 				30BB998D24C8388000C3804E /* PodcastsTableViewController.swift */,
 				30BB998F24C8397E00C3804E /* AddPodcastViewController.swift */,
 				30BB999324C8581100C3804E /* ProfileAdminViewController.swift */,
+				B1F9832024CA07F300279DEE /* RegisterViewController.swift */,
 			);
 			path = "Nike+Research";
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				30BB999624C9EEE900C3804E /* FilePodUser.swift in Sources */,
 				52E3D2371E7F53910064B02E /* SuggestionCollectionViewCell.swift in Sources */,
+				B1F9832124CA07F300279DEE /* RegisterViewController.swift in Sources */,
 				52E3D2241E7F0DAD0064B02E /* Shoe.swift in Sources */,
 				30BB999024C8397E00C3804E /* AddPodcastViewController.swift in Sources */,
 				30BB998C24C826A700C3804E /* AdminViewController.swift in Sources */,

@@ -104,30 +104,31 @@ class LoginViewController: UIViewController {
                 let qualityOfServiceClass = DispatchQoS.QoSClass.background
                 let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
                 backgroundQueue.async(execute: {
-                    
                     sleep(3)
-                    
                     DispatchQueue.main.async(execute: { () -> Void in
-                        
-            
-                        self.button.stopAnimation(animationStyle: .expand, completion: {
-                            Database.database().reference().child("usuarios").child(user!.user.uid).observeSingleEvent(of: .value, with: {
-                                (snapshot) in
-                                let value = snapshot.value as? NSDictionary
-                                let userInfo = Userdata()
-                                userInfo.id = user!.user.uid
-                                userInfo.name = value?["name"] as? String ?? ""
-                                userInfo.type = value?["type"] as? String ?? ""
-                                userInfo.imageURL = value?["image"] as? String ?? ""
-                                print(userInfo.type)
-                                //print(snapshot)
-                                if userInfo.type == "user" {
+                        Database.database().reference().child("usuarios").child(user!.user.uid).observeSingleEvent(of: .value, with: {
+                            (snapshot) in
+                            let value = snapshot.value as? NSDictionary
+                            let userInfo = Userdata()
+                            userInfo.id = user!.user.uid
+                            userInfo.name = value?["name"] as? String ?? ""
+                            userInfo.type = value?["type"] as? String ?? ""
+                            userInfo.imageURL = value?["image"] as? String ?? ""
+                            print(userInfo.type)
+                            //print(snapshot)
+                            if userInfo.type == "user" {
+                                self.button.stopAnimation(animationStyle: .normal, completion: {
                                     self.performSegue(withIdentifier: "userViewSegue", sender: nil)
-                                }else{
+                                    self.correoField.text! = ""
+                                    self.passwordField.text! = ""
+                                })
+                            }else{
+                                self.button.stopAnimation(animationStyle: .expand, completion: {
                                     self.performSegue(withIdentifier: "adminViewSegue", sender: nil)
-                                }
-                                
-                            })
+                                    self.correoField.text! = ""
+                                    self.passwordField.text! = ""
+                                })
+                            }
                         })
                     })
                 })
@@ -135,25 +136,4 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "userViewSegue" {
-//            let siguienteVC = segue.destination as! AdminViewController
-//            siguienteVC.userInfo = sender as! Userdata
-//        }
-//        if segue.identifier == "adminViewSegue" {
-//            let siguienteVC = segue.destination as! AdminViewController
-//            siguienteVC.userInfo = sender as! Userdata
-//        }
-    }
-
 }
