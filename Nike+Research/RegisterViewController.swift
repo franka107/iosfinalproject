@@ -95,6 +95,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                             let btnOK = UIAlertAction(title: "Aceptar", style: .default, handler: {(UIAlertAction) in self.performSegue(withIdentifier: "registerbacksegue", sender: nil)
                             })
                             alerta.addAction(btnOK)
+                            self.present(alerta, animated: true, completion: nil)
                         })
                         
                     }
